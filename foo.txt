@@ -6,3 +6,4 @@ foo
 bar
 baz
 quux
+foo
