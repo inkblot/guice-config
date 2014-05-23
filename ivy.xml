@@ -2,7 +2,7 @@
 <ivy-module version="2.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
-    <info organisation="org.movealong" module="guice-config" revision="0.0.3"/>
+    <info organisation="org.movealong" module="guice-config" revision="1.0.0"/>
 
     <configurations>
         <conf name="default" extends="runtime" description="Distributed artifacts"/>
@@ -16,13 +16,14 @@
 
     <publications>
         <artifact name="guice-config" type="jar" ext="jar" conf="default"/>
-        <artifact name="guice-config-source" type="source" ext="jar" conf="sources"/>
-        <artifact name="guice-config-src" ext="tar.gz" conf="build"/>
-        <artifact name="guice-config-src" ext="zip" conf="build"/>
+        <artifact name="guice-config" type="pom" ext="xml" conf="default"/>
+        <artifact name="guice-config" type="source" ext="jar" conf="sources"/>
+        <artifact name="guice-config" type="source" ext="tar.gz" conf="build"/>
+        <artifact name="guice-config" type="source" ext="zip" conf="build"/>
     </publications>
 
     <dependencies>
-        <dependency org="com.google.inject" name="guice" rev="2.0" conf="runtime->default"/>
-        <dependency org="org.slf4j" name="slf4j-api" rev="1.6.0" conf="runtime->default"/>
+        <dependency org="com.google.inject" name="guice" rev="3.0" conf="runtime->default"/>
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.7" conf="runtime->default"/>
     </dependencies>
 </ivy-module>
